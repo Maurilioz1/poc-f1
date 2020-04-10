@@ -1,0 +1,9 @@
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\bin\Debug\netcoreapp2.2\POCF1.Business.deps.json
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\bin\Debug\netcoreapp2.2\POCF1.Business.dll
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\bin\Debug\netcoreapp2.2\POCF1.Business.pdb
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.csprojAssemblyReference.cache
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.csproj.CoreCompileInputs.cache
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.AssemblyInfoInputs.cache
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.AssemblyInfo.cs
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.dll
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Business\obj\Debug\netcoreapp2.2\POCF1.Business.pdb
