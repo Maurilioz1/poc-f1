@@ -29,15 +29,13 @@ namespace POCF1.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<EquipeViewModel>> ObterTodos()
         {
-            var equipe = _mapper.Map<IEnumerable<EquipeViewModel>>(await _equipeRepository.ObterTodos());
-
-            return equipe;
+            return _mapper.Map<IEnumerable<EquipeViewModel>>(await _equipeRepository.ObterTodos());
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<EquipeViewModel>> ObterPorId(int id)
         {
-            var equipe = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterPorId(id));
+            var equipe = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterEquipePilotos(id));
 
             if (equipe == null) return NotFound();
 

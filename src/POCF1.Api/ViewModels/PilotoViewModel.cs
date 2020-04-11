@@ -15,15 +15,18 @@ namespace POCF1.Api.ViewModels
         public int EquipeId { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        [Range(1, 5, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
+        [Range(1, 5, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int NivelExperiencia { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        [Range(1, 3, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
+        [Range(1, 3, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int QuantidadeParadas { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        [Range(1, 20, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
+        [Range(1, 20, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int PosicaoLargada { get; set; }
+
+        [ScaffoldColumn(false)]
+        public string NomeEquipe { get; set; }
     }
 }

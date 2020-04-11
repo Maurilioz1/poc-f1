@@ -29,15 +29,13 @@ namespace POCF1.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<PilotoViewModel>> ObterTodos()
         {
-            var piloto = _mapper.Map<IEnumerable<PilotoViewModel>>(await _pilotoRepository.ObterTodos());
-
-            return piloto;
+            return _mapper.Map<IEnumerable<PilotoViewModel>>(await _pilotoRepository.ObterPilotosEquipes());
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<PilotoViewModel>> ObterPorId(int id)
         {
-            var piloto = _mapper.Map<PilotoViewModel>(await _pilotoRepository.ObterPorId(id));
+            var piloto = _mapper.Map<PilotoViewModel>(await _pilotoRepository.ObterPilotoEquipe(id));
 
             if (piloto == null) return NotFound();
 
@@ -47,14 +45,11 @@ namespace POCF1.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<PilotoViewModel>> Adicionar(PilotoViewModel pilotoViewModel)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var piloto = _mapper.Map<Piloto>(pilotoViewModel);
-            var result = await _pilotoService.Adicionar(piloto);
+            await _pilotoService.Adicionar(_mapper.Map<Piloto>(pilotoViewModel));
 
-            if (!result) return BadRequest();
-
-            return Ok(piloto);
+            return CustomResponse(pilotoViewModel);
         }
 
         [HttpPut("{id:int}")]
@@ -62,28 +57,23 @@ namespace POCF1.Api.Controllers
         {
             if (id != pilotoViewModel.Id) return BadRequest();
 
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var piloto = _mapper.Map<Piloto>(pilotoViewModel);
-            var result = await _pilotoService.Atualizar(piloto);
+            await _pilotoService.Atualizar(_mapper.Map<Piloto>(pilotoViewModel));
 
-            if (!result) return BadRequest();
-
-            return Ok(piloto);
+            return CustomResponse(pilotoViewModel);
         }
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<PilotoViewModel>> Excluir(int id)
         {
-            var piloto = _mapper.Map<PilotoViewModel>(await _pilotoRepository.ObterPiloto(id));
+            var piloto = _mapper.Map<PilotoViewModel>(await _pilotoRepository.ObterPilotoEquipe(id));
 
             if (piloto == null) return NotFound();
 
-            var result = await _pilotoService.Remover(id);
+            await _pilotoService.Remover(id);
 
-            if (!result) return BadRequest();
-
-            return Ok(piloto);
+            return CustomResponse(piloto);
         }
     }
 }

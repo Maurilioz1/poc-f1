@@ -13,11 +13,11 @@ namespace POCF1.Api.ViewModels
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        [Range(600, 700, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
+        [Range(600, 700, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int PotenciaCarro { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        [Range(1, 5, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
+        [Range(1, 5, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int AerodinamicaCarro { get; set; }
 
         public IEnumerable<PilotoViewModel> Pilotos { get; set; }
