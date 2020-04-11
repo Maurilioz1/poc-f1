@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace POCF1.Business.Intefaces
+namespace POCF1.Business.Interfaces
 {
     public interface IPilotoRepository : IRepository<Piloto>
     {

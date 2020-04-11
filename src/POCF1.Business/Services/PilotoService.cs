@@ -1,4 +1,4 @@
-﻿using POCF1.Business.Intefaces;
+﻿using POCF1.Business.Interfaces;
 using POCF1.Business.Models;
 using POCF1.Business.Models.Validations;
 using System.Threading.Tasks;

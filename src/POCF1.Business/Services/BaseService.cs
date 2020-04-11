@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using POCF1.Business.Intefaces;
+using POCF1.Business.Interfaces;
 using POCF1.Business.Models;
 using POCF1.Business.Notificacoes;
 using FluentValidation.Results;

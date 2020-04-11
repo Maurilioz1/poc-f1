@@ -16,11 +16,11 @@ namespace POCF1.Data.Mappings
 
             builder.Property(e => e.PotenciaCarro)
                 .IsRequired()
-                .HasColumnType("int(3)");
+                .HasColumnType("int");
 
             builder.Property(e => e.AerodinamicaCarro)
                 .IsRequired()
-                .HasColumnType("varchar(1)");
+                .HasColumnType("int");
 
             builder.HasMany(e => e.Pilotos)
                 .WithOne(e => e.Equipe)

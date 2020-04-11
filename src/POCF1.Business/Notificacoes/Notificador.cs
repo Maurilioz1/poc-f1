@@ -1,4 +1,4 @@
-﻿using POCF1.Business.Intefaces;
+﻿using POCF1.Business.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 

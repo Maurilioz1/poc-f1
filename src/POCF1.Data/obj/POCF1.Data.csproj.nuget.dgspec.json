@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\Maurilio\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Maurilio\\Documents\\Cursos\\ASP.NET Core\\Web API\\Projetos\\POC-F1\\src\\POCF1.Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Maurilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -72,6 +75,9 @@
         "packagesPath": "C:\\Users\\Maurilio\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Maurilio\\Documents\\Cursos\\ASP.NET Core\\Web API\\Projetos\\POC-F1\\src\\POCF1.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Maurilio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

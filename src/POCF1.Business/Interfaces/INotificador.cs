@@ -1,7 +1,7 @@
 ﻿using POCF1.Business.Notificacoes;
 using System.Collections.Generic;
 
-namespace POCF1.Business.Intefaces
+namespace POCF1.Business.Interfaces
 {
     public interface INotificador
     {

@@ -16,15 +16,15 @@ namespace POCF1.Data.Mappings
 
             builder.Property(p => p.NivelExperiencia)
                 .IsRequired()
-                .HasColumnType("int(1)");
+                .HasColumnType("int");
 
             builder.Property(p => p.QuantidadeParadas)
                 .IsRequired()
-                .HasColumnType("int(1)");
+                .HasColumnType("int");
 
             builder.Property(p => p.PosicaoLargada)
                 .IsRequired()
-                .HasColumnType("int(2)");
+                .HasColumnType("int");
 
             builder.ToTable("Pilotos");
         }

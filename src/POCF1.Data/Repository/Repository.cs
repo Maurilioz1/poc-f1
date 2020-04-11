@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using POCF1.Business.Intefaces;
+using POCF1.Business.Interfaces;
 using POCF1.Business.Models;
 using POCF1.Data.Context;
 using System;
