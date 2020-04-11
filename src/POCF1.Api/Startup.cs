@@ -28,6 +28,8 @@ namespace POCF1.Api
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.Configure<ApiBehaviorOptions>(options => options.SuppressModelStateInvalidFilter = true);
+
             services.ResolveDependencies();
         }
 

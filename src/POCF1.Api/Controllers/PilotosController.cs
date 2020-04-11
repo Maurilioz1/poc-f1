@@ -15,7 +15,11 @@ namespace POCF1.Api.Controllers
         private readonly IPilotoService _pilotoService;
         private readonly IMapper _mapper;
 
-        public PilotosController(IPilotoRepository pilotoRepository, IPilotoService pilotoService, IMapper mapper)
+        public PilotosController(
+            IPilotoRepository pilotoRepository,
+            IPilotoService pilotoService,
+            IMapper mapper,
+            INotificador notificador) : base(notificador)
         {
             _pilotoRepository = pilotoRepository;
             _pilotoService = pilotoService;

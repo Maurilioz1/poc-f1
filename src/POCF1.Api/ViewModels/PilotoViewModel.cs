@@ -25,8 +25,5 @@ namespace POCF1.Api.ViewModels
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
         [Range(1, 20, ErrorMessage = "O campo {0} precisa ter entre {1} e {2} caracteres.")]
         public int PosicaoLargada { get; set; }
-
-        [ScaffoldColumn(false)]
-        public string Equipe { get; set; }
     }
 }

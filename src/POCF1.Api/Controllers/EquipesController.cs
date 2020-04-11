@@ -15,7 +15,11 @@ namespace POCF1.Api.Controllers
         private readonly IEquipeService _equipeService;
         private readonly IMapper _mapper;
 
-        public EquipesController(IEquipeRepository equipeRepository, IEquipeService equipeService, IMapper mapper)
+        public EquipesController(
+            IEquipeRepository equipeRepository,
+            IEquipeService equipeService,
+            IMapper mapper,
+            INotificador notificador) : base(notificador)
         {
             _equipeRepository = equipeRepository;
             _equipeService = equipeService;
@@ -43,14 +47,11 @@ namespace POCF1.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<EquipeViewModel>> Adicionar(EquipeViewModel equipeViewModel)
         {
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var equipe = _mapper.Map<Equipe>(equipeViewModel);
-            var result = await _equipeService.Adicionar(equipe);
+            await _equipeService.Adicionar(_mapper.Map<Equipe>(equipeViewModel));
 
-            if (!result) return BadRequest();
-
-            return Ok(equipe);
+            return CustomResponse(equipeViewModel);
         }
 
         [HttpPut("{id:int}")]
@@ -58,28 +59,23 @@ namespace POCF1.Api.Controllers
         {
             if (id != equipeViewModel.Id) return BadRequest();
 
-            if (!ModelState.IsValid) return BadRequest();
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var equipe = _mapper.Map<Equipe>(equipeViewModel);
-            var result = await _equipeService.Atualizar(equipe);
+            await _equipeService.Atualizar(_mapper.Map<Equipe>(equipeViewModel));
 
-            if (!result) return BadRequest();
-
-            return Ok(equipe);
+            return CustomResponse(equipeViewModel);
         }
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<EquipeViewModel>> Excluir(int id)
         {
-            var equipe = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterEquipe(id));
+            var equipeViewModel = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterEquipe(id));
 
-            if (equipe == null) return NotFound();
+            if (equipeViewModel == null) return NotFound();
 
-            var result = await _equipeService.Remover(id);
+            await _equipeService.Remover(id);
 
-            if (!result) return BadRequest();
-
-            return Ok(equipe);
+            return CustomResponse(equipeViewModel);
         }
     }
 }
