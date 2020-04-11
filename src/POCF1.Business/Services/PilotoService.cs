@@ -14,23 +14,26 @@ namespace POCF1.Business.Services
             _pilotoRepository = pilotoRepository;
         }
 
-        public async Task Adicionar(Piloto piloto)
+        public async Task<bool> Adicionar(Piloto piloto)
         {
-            if (!ExecutarValidacao(new PilotoValidation(), piloto)) return;
+            if (!ExecutarValidacao(new PilotoValidation(), piloto)) return false;
 
             await _pilotoRepository.Adicionar(piloto);
+            return true;
         }
 
-        public async Task Atualizar(Piloto piloto)
+        public async Task<bool> Atualizar(Piloto piloto)
         {
-            if (!ExecutarValidacao(new PilotoValidation(), piloto)) return;
+            if (!ExecutarValidacao(new PilotoValidation(), piloto)) return false;
 
             await _pilotoRepository.Atualizar(piloto);
+            return true;
         }
 
-        public async Task Remover(int id)
+        public async Task<bool> Remover(int id)
         {
             await _pilotoRepository.Remover(id);
+            return true;
         }
 
         public void Dispose()

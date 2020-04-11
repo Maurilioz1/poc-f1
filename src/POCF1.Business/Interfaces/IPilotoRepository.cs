@@ -8,6 +8,6 @@ namespace POCF1.Business.Interfaces
     {
         Task<IEnumerable<Piloto>> ObterPilotosPorEquipe(int equipeId);
         Task<IEnumerable<Piloto>> ObterPilotosEquipes();
-        Task<Piloto> ObterPilotoEquipe(int id);
+        Task<Piloto> ObterPiloto(int id);
     }
 }

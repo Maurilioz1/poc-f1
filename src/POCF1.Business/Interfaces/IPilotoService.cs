@@ -6,8 +6,8 @@ namespace POCF1.Business.Interfaces
 {
     public interface IPilotoService : IDisposable
     {
-        Task Adicionar(Piloto piloto);
-        Task Atualizar(Piloto piloto);
-        Task Remover(int id);
+        Task<bool> Adicionar(Piloto piloto);
+        Task<bool> Atualizar(Piloto piloto);
+        Task<bool> Remover(int id);
     }
 }
