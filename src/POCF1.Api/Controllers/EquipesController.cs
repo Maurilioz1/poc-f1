@@ -67,7 +67,7 @@ namespace POCF1.Api.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<EquipeViewModel>> Excluir(int id)
         {
-            var equipeViewModel = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterEquipe(id));
+            var equipeViewModel = _mapper.Map<EquipeViewModel>(await _equipeRepository.ObterPorId(id));
 
             if (equipeViewModel == null) return NotFound();
 

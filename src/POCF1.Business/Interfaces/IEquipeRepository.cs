@@ -6,6 +6,5 @@ namespace POCF1.Business.Interfaces
     public interface IEquipeRepository : IRepository<Equipe>
     {
         Task<Equipe> ObterEquipePilotos(int id);
-        Task<Equipe> ObterEquipe(int id);
     }
 }

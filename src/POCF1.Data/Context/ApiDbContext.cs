@@ -13,6 +13,7 @@ namespace POCF1.Data.Context
 
         public DbSet<Equipe> Equipes { get; set; }
         public DbSet<Piloto> Pilotos { get; set; }
+        public DbSet<Corrida> Corridas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

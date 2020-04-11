@@ -10,12 +10,6 @@ namespace POCF1.Data.Repository
     {
         public EquipeRepository(ApiDbContext context) : base(context) { }
 
-        public async Task<Equipe> ObterEquipe(int id)
-        {
-            return await Db.Equipes.AsNoTracking()
-                .FirstOrDefaultAsync(c => c.Id == id);
-        }
-
         public async Task<Equipe> ObterEquipePilotos(int id)
         {
             return await Db.Equipes.AsNoTracking()

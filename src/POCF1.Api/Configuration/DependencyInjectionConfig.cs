@@ -15,9 +15,11 @@ namespace POCF1.Api.Configuration
 
             services.AddScoped<IEquipeRepository, EquipeRepository>();
             services.AddScoped<IPilotoRepository, PilotoRepository>();
+            services.AddScoped<ICorridaRepository, CorridaRepository>();
 
             services.AddScoped<IEquipeService, EquipeService>();
             services.AddScoped<IPilotoService, PilotoService>();
+            services.AddScoped<ICorridaService, CorridaService>();
 
             services.AddScoped<INotificador, Notificador>();
 
