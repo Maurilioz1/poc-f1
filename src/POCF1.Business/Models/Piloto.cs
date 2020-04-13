@@ -1,4 +1,6 @@
-﻿namespace POCF1.Business.Models
+﻿using System.Collections.Generic;
+
+namespace POCF1.Business.Models
 {
     public class Piloto : Entity
     {

@@ -8,6 +8,6 @@ namespace POCF1.Business.Models
         public int PotenciaCarro { get; set; }
         public int AerodinamicaCarro { get; set; }
 
-        public IEnumerable<Piloto> Pilotos { get; set; }
+        public ICollection<Piloto> Pilotos { get; set; }
     }
 }

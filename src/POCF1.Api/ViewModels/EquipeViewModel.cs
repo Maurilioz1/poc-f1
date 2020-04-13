@@ -19,7 +19,5 @@ namespace POCF1.Api.ViewModels
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
         [Range(1, 5, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int AerodinamicaCarro { get; set; }
-
-        public IEnumerable<PilotoViewModel> Pilotos { get; set; }
     }
 }

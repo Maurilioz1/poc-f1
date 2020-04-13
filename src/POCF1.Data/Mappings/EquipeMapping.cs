@@ -22,10 +22,6 @@ namespace POCF1.Data.Mappings
                 .IsRequired()
                 .HasColumnType("int");
 
-            builder.HasMany(e => e.Pilotos)
-                .WithOne(e => e.Equipe)
-                .HasForeignKey(e => e.EquipeId);
-
             builder.ToTable("Equipes");
         }
     }

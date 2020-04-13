@@ -26,7 +26,6 @@ namespace POCF1.Api.ViewModels
         [Range(1, 20, ErrorMessage = "O campo {0} precisa ter um valor entre {1} e {2}.")]
         public int PosicaoLargada { get; set; }
 
-        [ScaffoldColumn(false)]
-        public string NomeEquipe { get; set; }
+        public EquipeViewModel Equipe { get; set; }
     }
 }

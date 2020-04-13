@@ -9,11 +9,7 @@ namespace POCF1.Api.Configuration
         public AutoMapperConfig()
         {
             CreateMap<Equipe, EquipeViewModel>().ReverseMap();
-
-            CreateMap<PilotoViewModel, Piloto>();
-            CreateMap<Piloto, PilotoViewModel>()
-                .ForMember(dest => dest.NomeEquipe, opt => opt.MapFrom(src => src.Equipe.Nome));
-
+            CreateMap<Piloto, PilotoViewModel>().ReverseMap();
             CreateMap<Corrida, CorridaViewModel>().ReverseMap();
         }
     }

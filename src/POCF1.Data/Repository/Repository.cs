@@ -56,7 +56,14 @@ namespace POCF1.Data.Repository
 
         public async Task<int> SaveChanges()
         {
-            return await Db.SaveChangesAsync();
+            try
+            {
+                return await Db.SaveChangesAsync();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void Dispose()

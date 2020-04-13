@@ -47,9 +47,10 @@ namespace POCF1.Api.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            await _equipeService.Adicionar(_mapper.Map<Equipe>(equipeViewModel));
+            var model = _mapper.Map<Equipe>(equipeViewModel);
+            await _equipeService.Adicionar(model);
 
-            return CustomResponse(equipeViewModel);
+            return CustomResponse(_mapper.Map<EquipeViewModel>(model));
         }
 
         [HttpPut("{id:int}")]

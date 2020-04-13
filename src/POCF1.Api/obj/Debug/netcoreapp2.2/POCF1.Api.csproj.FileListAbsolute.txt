@@ -11,6 +11,7 @@ C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\bin\Debug\netcoreapp2.2\POCF1.Business.pdb
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\bin\Debug\netcoreapp2.2\POCF1.Data.pdb
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.csprojAssemblyReference.cache
+C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.csproj.CoreCompileInputs.cache
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.RazorAssemblyInfo.cache
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.RazorAssemblyInfo.cs
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.AssemblyInfoInputs.cache
@@ -20,4 +21,3 @@ C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.dll
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.pdb
 C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.genruntimeconfig.cache
-C:\Users\Maurilio\Documents\Cursos\ASP.NET Core\Web API\Projetos\POC-F1\src\POCF1.Api\obj\Debug\netcoreapp2.2\POCF1.Api.csproj.CoreCompileInputs.cache

@@ -25,35 +25,33 @@ namespace POCF1.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataCorrida")
-                        .HasColumnType("datetime");
+                    b.Property<DateTime>("DataCorrida");
 
                     b.Property<string>("NomeCircuito")
                         .IsRequired()
                         .HasColumnType("varchar(30)");
 
-                    b.Property<int>("Piloto1")
-                        .HasColumnType("int");
+                    b.Property<int?>("Piloto1Id");
 
-                    b.Property<int>("Piloto2")
-                        .HasColumnType("int");
+                    b.Property<int?>("Piloto2Id");
 
-                    b.Property<int>("Piloto3")
-                        .HasColumnType("int");
+                    b.Property<int?>("Piloto3Id");
 
-                    b.Property<DateTime>("Tempo1")
-                        .HasColumnType("datetime");
+                    b.Property<TimeSpan?>("Tempo1");
 
-                    b.Property<DateTime>("Tempo2")
-                        .HasColumnType("datetime");
+                    b.Property<TimeSpan?>("Tempo2");
 
-                    b.Property<DateTime>("Tempo3")
-                        .HasColumnType("datetime");
+                    b.Property<TimeSpan?>("Tempo3");
 
-                    b.Property<int>("TrajetoTotalCircuito")
-                        .HasColumnType("int");
+                    b.Property<int>("TrajetoTotalCircuito");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Piloto1Id");
+
+                    b.HasIndex("Piloto2Id");
+
+                    b.HasIndex("Piloto3Id");
 
                     b.ToTable("Corridas");
                 });
@@ -105,6 +103,21 @@ namespace POCF1.Data.Migrations
                     b.HasIndex("EquipeId");
 
                     b.ToTable("Pilotos");
+                });
+
+            modelBuilder.Entity("POCF1.Business.Models.Corrida", b =>
+                {
+                    b.HasOne("POCF1.Business.Models.Piloto", "Piloto1")
+                        .WithMany()
+                        .HasForeignKey("Piloto1Id");
+
+                    b.HasOne("POCF1.Business.Models.Piloto", "Piloto2")
+                        .WithMany()
+                        .HasForeignKey("Piloto2Id");
+
+                    b.HasOne("POCF1.Business.Models.Piloto", "Piloto3")
+                        .WithMany()
+                        .HasForeignKey("Piloto3Id");
                 });
 
             modelBuilder.Entity("POCF1.Business.Models.Piloto", b =>

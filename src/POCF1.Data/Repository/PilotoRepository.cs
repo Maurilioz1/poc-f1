@@ -12,6 +12,11 @@ namespace POCF1.Data.Repository
     {
         public PilotoRepository(ApiDbContext context) : base(context) { }
 
+        public override async Task<List<Piloto>> ObterTodos()
+        {
+            return await DbSet.AsNoTracking().Include(piloto => piloto.Equipe).ToListAsync();
+        }
+
         public async Task<Piloto> ObterPilotoEquipe(int id)
         {
             return await Db.Pilotos.AsNoTracking().Include(f => f.Equipe)

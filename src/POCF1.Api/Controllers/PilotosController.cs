@@ -28,8 +28,9 @@ namespace POCF1.Api.Controllers
 
         [HttpGet]
         public async Task<IEnumerable<PilotoViewModel>> ObterTodos()
+        
         {
-            return _mapper.Map<IEnumerable<PilotoViewModel>>(await _pilotoRepository.ObterPilotosEquipes());
+            return _mapper.Map<IEnumerable<PilotoViewModel>>(await _pilotoRepository.ObterTodos());
         }
 
         [HttpGet("{id:int}")]
@@ -47,9 +48,10 @@ namespace POCF1.Api.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            await _pilotoService.Adicionar(_mapper.Map<Piloto>(pilotoViewModel));
+            var model = _mapper.Map<Piloto>(pilotoViewModel);
+            await _pilotoService.Adicionar(model);
 
-            return CustomResponse(pilotoViewModel);
+            return CustomResponse(_mapper.Map<PilotoViewModel>(model));
         }
 
         [HttpPut("{id:int}")]

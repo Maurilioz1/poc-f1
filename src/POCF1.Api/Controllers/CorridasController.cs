@@ -47,9 +47,10 @@ namespace POCF1.Api.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            await _corridaService.Adicionar(_mapper.Map<Corrida>(corridaViewModel));
+            var model = _mapper.Map<Corrida>(corridaViewModel);
+            await _corridaService.Adicionar(model);
 
-            return CustomResponse(corridaViewModel);
+            return CustomResponse(_mapper.Map<CorridaViewModel>(model));
         }
 
         [HttpPut("{id:int}")]
